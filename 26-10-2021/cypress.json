@@ -1,4 +1,5 @@
 {
     "baseUrl": "https://www.saucedemo.com/",
+    "password": "secret_sauce",
     "chromeWebSecurity": false
 }
