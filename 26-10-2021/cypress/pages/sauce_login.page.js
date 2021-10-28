@@ -3,14 +3,13 @@ import {LOGIN as LoIn, EXTRAS as EX} from "../pages/components/sauce.elements.js
 
 export default class SauceLogin extends Base {
     static acessarSauceDemo() {
-        cy.visit(`${Cypress.env("baseUrl")}`)
+        cy.visit(`/`)
     }
 
-    static logar(usuario = "locked_out_user") {
+    static logar(usuario = "locked_out_user", password = "secret_sauce") {
         super.typeValue(LoIn.INP_USER, usuario)
-        super.typeValue(LoIn.INP_PASSWORD, `${Cypress.env("password")}`)
+        super.typeValue(LoIn.INP_PASSWORD, password)
         super.clickOnElement(LoIn.BTN_LOGIN)
-        super.validarUrl("/inventory.html")
     }
 
     static validarLoginIncorreto() {

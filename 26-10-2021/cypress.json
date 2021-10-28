@@ -1,5 +1,7 @@
 {
-    "baseUrl": "https://www.saucedemo.com/",
+    "baseUrl": "https://www.saucedemo.com",
     "password": "secret_sauce",
+    "viewportWidth": 720,
+    "viewportHeight": 1080,
     "chromeWebSecurity": false
 }

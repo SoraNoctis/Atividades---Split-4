@@ -14,7 +14,6 @@ describe("Testes de Login Swag Labs DEMO", () => {
 
     it("Deve falhar ao acessar a loja com locked_out_user.", () => {
         SauceLogin.logar("locked_out_user")
-        cy.url().should("contain", "")
         cy.get("[data-test=error]")
     })
 
@@ -23,7 +22,7 @@ describe("Testes de Login Swag Labs DEMO", () => {
         cy.url().should("contain", "inventory.html")
     })
 
-    it("Deve tentar acessar a loja com performance_glitch_user.", () => {
+    it.skip("Deve tentar acessar a loja com performance_glitch_user.\n (Desativado por ser lento por padrão)", () => {
         SauceLogin.logar("performance_glitch_user")
         cy.url().should("contain", "inventory.html")
     })
